@@ -1,5 +1,5 @@
-# Zephyr Cloud
-This document shows my thoughts, as a senior software developer, first impressing the Zephyr's Cloud software and services for micro-frontends with Module Federation Architecture.
+# Zephyr Cloud Exploration - Bernardo Rodrigues
+This document shows my thoughts and first impressions, as a senior software developer, of the Zephyr's Cloud software and services for micro-frontends with Module Federation Architecture.
 
 ## Application deployed
 > #### Main app:
@@ -9,35 +9,35 @@ This document shows my thoughts, as a senior software developer, first impressin
 > https://bernardo-henrique-155-mf-react-rsbuild-provider-m-4294d2d78-ze.zephyrcloud.app/
 
 ## METHODOLOGY
-At first, I took a look at Zephyr's initial page, and went through its Overview, Quickstart and Vite + Webpack + Rspack with Module Federation pages.
+At first, I took a look at Zephyr's initial page, and went through it's Overview, Quickstart and Vite + Webpack + Rspack with Module Federation pages.
 
 I initialized a new project using the npm tool "create-zephyr-apps".
 Then I used cursor to explore the project architecture & understand the main funcionallities. Also, generated a README.md file with all the information I gathered.
 
-Then, I went trough some troubleshooting using Cursor and pointing to Zephyr Cloud's official docs.
+Then, I went through some troubleshooting using Cursor and pointing to Zephyr Cloud's official docs.
 
 Finally, I managed to have my micro-frontend app running and deployed in Zephyr Cloud's service.
 
 ## HOW IT WORKS
-Module Federation is a JavaScript application partitioning architecture pattern (similar to microservices on the server side) that allows you to share code and resources between multiple JavaScript applications (or micro frontends). As I have researched, it brings plenty of advantages - as well as some tradeoffs, of course - such as:
+Module Federation is a JavaScript application partitioning architecture pattern (similar to microservices on the server side) that allows you to share code and resources between multiple JavaScript applications (or micro frontends). Based on my research, it brings plenty of advantages - as well as some tradeoffs, of course - such as:
 - *Code Sharing:* Module Federation allows developers to share code between multiple projects in a decentralized way, making it easier to manage complex applications.
 - *Modularization:* Applications can be split into smaller, self-contained modules that can be independently developed, tested, and deployed.
 - *Flexibility:* Module federation offers developers the freedom to choose and implement the architecture that best suits their needs.
 
 The biggest tradeoffs for Module Federation (that actually comes from micro-frontends in general) are the overhead of managing the extra complexity of the projects theirselves, their deployments and also their codebases.
 
-Zephyr Cloud, in its turn, brings some more extra advantages in its service based on Module Federation. Its agnostic about frameworks, bundlers and cloud providers, therefore being configurable in several different projects. Beoynd that, Zephyr gives you the power of its Default Cloud, with the largest CDNs network in the world and the easiest way to deploy.
+Zephyr Cloud, in it's turn, brings some more extra advantages in it's service based on Module Federation. It's agnostic about frameworks, bundlers and cloud providers, therefore being configurable in several different projects. Beyond that, Zephyr gives you the power of it's Default Cloud, with the largest CDNs network in the world and the easiest way to deploy.
 
-Zephyr Cloud make it easy to deploy a micro-frontend app, with live previews and seamless deployment flows.
+Zephyr Cloud makes it easy to deploy a micro-frontend app, with live previews and seamless deployment flows.
 
 ## COMMENTS & THOUGHTS
-- NextJS is the main framework for ReactJS - also suggested in the ReactJS official page. But the thing is that now it uses Turbopack (previously Webpack) as its bundler, and it is still not supported by Zephyr Cloud. I think its something to be considered asap by Zephyr's developers team.
+- NextJS is the main framework for ReactJS - also suggested in the ReactJS official page. But the thing is that now it uses Turbopack (previously Webpack) as it's bundler, and it is still not supported by Zephyr Cloud. I think it's something to be considered asap by Zephyr's developers team.
 
-- Using create-zephyr-apps - template "React + Rsbuild + Module Federation" - is a really good experience. I just wanted to mention this here. Also, I think it deserves to be highlighted in the Quickstart page of Zephyr's docs. I only see its mention in the initial page (https://zephyr-cloud.io/).
+- Using create-zephyr-apps - template "React + Rsbuild + Module Federation" - is a really good experience. I just wanted to mention this here. Also, I think it deserves to be highlighted in the Quickstart page of Zephyr's docs. I only see it's mention in the initial page (https://zephyr-cloud.io/).
 
 ## ISSUES
 
-I had problems during the authentication flow to Zephyr Cloud in my first build. It got solved later on, but it looks like an race condition when the app is created by create-zephyr-apps. Check the Cursor logs:
+I had problems during the authentication flow to Zephyr Cloud in my first build. It got solved later on, but it looks like a race condition when the app is created by create-zephyr-apps. Check the Cursor logs:
 
 🔐 Two Ways to Authenticate with Zephyr Cloud
 Method 1: Interactive Browser Login (Those URLs)
