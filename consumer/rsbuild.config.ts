@@ -11,7 +11,16 @@ export default defineConfig({
       remotes: {
         federation_provider: 'federation_provider@http://localhost:3000/mf-manifest.json',
       },
-      shared: ['react', 'react-dom'],
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^19.2.0',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^19.2.0',
+        },
+      },
     }),
     withZephyr(),
   ],
