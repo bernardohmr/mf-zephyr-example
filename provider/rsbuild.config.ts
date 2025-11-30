@@ -6,7 +6,6 @@ import { withZephyr } from 'zephyr-rsbuild-plugin';
 export default defineConfig({
   plugins: [
     pluginReact(),
-    withZephyr(),
     pluginModuleFederation({
       name: 'federation_provider',
       exposes: {
@@ -14,6 +13,7 @@ export default defineConfig({
       },
       shared: ['react', 'react-dom'],
     }),
+    withZephyr(),
   ],
   server: {
     port: 3000,
