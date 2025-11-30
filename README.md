@@ -294,6 +294,22 @@ export default App;
 - [Rsbuild Documentation](https://rsbuild.dev/)
 - [pnpm Workspaces](https://pnpm.io/workspaces)
 
+## 🚀 Production Deployment
+
+For production deployment with Zephyr Cloud, see **[PRODUCTION.md](./PRODUCTION.md)** for detailed instructions on:
+- How dual-mode (dev/prod) URLs work
+- Zephyr Cloud dependency resolution
+- Deployment process and best practices
+- Understanding and resolving warnings
+
+## 🔐 Authentication
+
+For Zephyr Cloud authentication setup, see **[AUTHENTICATION.md](./AUTHENTICATION.md)** for:
+- Interactive browser login
+- API token setup for CI/CD
+- Troubleshooting authentication issues
+- Sequential startup for avoiding race conditions
+
 ---
 
 ## 🎯 Next Steps / Improvements
