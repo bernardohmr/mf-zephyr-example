@@ -7,7 +7,8 @@
     "build": "pnpm build-provider && pnpm build-consumer",
     "build-provider": "pnpm --filter=mf-react-rsbuild-provider build",
     "build-consumer": "pnpm --filter=mf-react-rsbuild-consumer build",
-    "dev": "pnpm --filter=mf-react-rsbuild-provider dev & pnpm --filter=mf-react-rsbuild-consumer dev"
+    "dev": "./start-with-zephyr.sh",
+    "dev:no-auth": "./start-dev.sh"
   },
   "keywords": ["rsbuild", "module-federation", "zephyr"],
   "author": "",
